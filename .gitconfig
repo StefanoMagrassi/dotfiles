@@ -1,0 +1,11 @@
+[user]
+	email = stefano.magrassi@dservicemedia.it
+	name = Stefano Magrassi
+[core]
+	editor = vim
+[push]
+	default = simple
+[merge]
+	tool = meld
+[diff]
+	tool = meld
