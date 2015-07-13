@@ -3,6 +3,8 @@
 	email = stefano.magrassi@nexxa.it
 [core]
 	editor = vim
+[push]
+	default = simple
 [merge]
 	tool = meld
 [diff]
