@@ -1,0 +1,9 @@
+[user]
+	name = Stefano Magrassi
+	email = stefano.magrassi@nexxa.it
+[core]
+	editor = vim
+[merge]
+	tool = meld
+[diff]
+	tool = meld
