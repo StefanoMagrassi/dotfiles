@@ -8,3 +8,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Composer
 #alias composer='/usr/local/bin/composer/composer.phar'
+
+# Test network
+alias net='wget --spider http://www.google.com'
