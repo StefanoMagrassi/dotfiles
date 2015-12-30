@@ -1,5 +1,3 @@
-# Default configuration
+# Dotfiles
 
-Default configuration script files.
-
-Easy startup on Linux.
+Repo of my personal dotfiles
