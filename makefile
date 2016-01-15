@@ -8,3 +8,4 @@ run:
 	ln -s $(PWD)/.jsbeautifyrc ~/.jsbeautifyrc
 	ln -s $(PWD)/.profile ~/.profile
 	ln -s $(PWD)/.vimrc ~/.vimrc
+	ln -s $(PWD)/.tnsrc ~/.tnsrc

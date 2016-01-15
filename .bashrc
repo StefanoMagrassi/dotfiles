@@ -61,6 +61,11 @@ if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion.d/git-prompt
 fi
 
+# Native Script - tns completion
+if [ -f ~/.tnsrc ]; then 
+  source ~/.tnsrc
+fi
+
 ## VTE
 ## ---
 . /etc/profile.d/vte.sh
