@@ -9,7 +9,7 @@
   "html": {
     "allowed_file_extensions": ["htm", "html", "xhtml", "shtml", "xml", "svg", "php", "vm", "ftl"],
     "brace_style": "collapse", // [collapse|expand|end-expand|none]
-    "end_with_newline": false, // End output with newline
+    "end_with_newline": true, // End output with newline
     "indent_char": " ", // Indentation character
     "indent_handlebars": false, // e.g. {{#foo}}, {{/foo}}
     "indent_inner_html": true, // Indent <head> and <body> sections
@@ -22,7 +22,7 @@
   },
   "css": {
     "allowed_file_extensions": ["css", "scss", "sass", "less"],
-    "end_with_newline": false, // End output with newline
+    "end_with_newline": true, // End output with newline
     "indent_char": " ", // Indentation character
     "indent_size": 2, // Indentation size
     "selector_separator": " ",
@@ -30,10 +30,10 @@
   },
   "js": {
     "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
-    "brace_style": "expand", // [collapse|expand|end-expand|none]
+    "brace_style": "collapse", // [collapse|expand|end-expand|none]
     "break_chained_methods": false, // Break chained method calls across subsequent lines
     "e4x": false, // Pass E4X xml literals through untouched
-    "end_with_newline": false, // End output with newline
+    "end_with_newline": true, // End output with newline
     "eval_code": false,
     "indent_char": " ", // Indentation character
     "indent_level": 0, // Initial indentation level
