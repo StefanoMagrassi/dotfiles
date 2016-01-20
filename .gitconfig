@@ -11,3 +11,12 @@
 	tool = meld
 [color]
 	ui = auto
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	short = log --abbrev-commit --pretty=oneline
