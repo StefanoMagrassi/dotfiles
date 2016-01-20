@@ -18,15 +18,21 @@ HISTFILESIZE=2000
 ## SHELL OPTIONS
 ## -------------
 # Append to the history file, don't overwrite it
-shopt -s histappend
+if [ "$(shopt -p | grep histappend)" ]; then
+  shopt -s histappend
+fi
 
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+if [ "$(shopt -p | grep checkwinsize)" ]; then
+  shopt -s checkwinsize
+fi
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-shopt -s globstar
+if [ "$(shopt -p | grep globstar)" ]; then
+  shopt -s globstar
+fi
 
 ## LESS
 ## ----
