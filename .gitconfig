@@ -9,3 +9,5 @@
 	tool = meld
 [diff]
 	tool = meld
+[color]
+	ui = auto
