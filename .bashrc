@@ -39,18 +39,6 @@ fi
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-## COLORS
-## ------
-if [ -f ~/.bash_colors ]; then
-  . ~/.bash_colors
-fi
-
-## ALIASES
-## -------
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
-
 ## COMPLETION
 ## ----------
 #  Enable programmable completion features
@@ -63,17 +51,33 @@ if ! shopt -oq posix; then
 fi
 
 # Git completion
-if [ -f /etc/bash_completion ]; then
+if [ -f /etc/bash_completion.d/git-prompt ]; then
   . /etc/bash_completion.d/git-prompt
 fi
 
+if [ -f /etc/bash_completion.d/git-completion ]; then
+  . /etc/bash_completion.d/git-completion
+fi
+
 # Native Script - tns completion
-if [ -f ~/.tnsrc ]; then 
-  source ~/.tnsrc
+if [ -f ~/.tnsrc ]; then
+source ~/.tnsrc
+fi
+
+## COLORS
+## ------
+if [ -f ~/.bash_colors ]; then
+  . ~/.bash_colors
+fi
+
+## ALIASES
+## -------
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
 fi
 
 ## VTE
 ## ---
-if [ -f /etc/profile.d/vte.sh ]; then 
+if [ -f /etc/profile.d/vte.sh ]; then
   . /etc/profile.d/vte.sh
 fi

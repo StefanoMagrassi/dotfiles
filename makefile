@@ -5,6 +5,8 @@ bash:
 	ln -s $(PWD)/.bash_aliases ~/.bash_aliases
 	rm -f ~/.bash_colors
 	ln -s $(PWD)/.bash_colors ~/.bash_colors
+	rm -f ~/.bash_profile
+	ln -s $(PWD)/.bash_profile ~/.bash_profile
 	rm -f ~/.bashrc
 	ln -s $(PWD)/.bashrc ~/.bashrc
 	rm -f ~/.envvars
