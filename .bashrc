@@ -68,4 +68,6 @@ fi
 
 ## VTE
 ## ---
-. /etc/profile.d/vte.sh
+if [ -f /etc/profile.d/vte.sh ]; then 
+  . /etc/profile.d/vte.sh
+fi
