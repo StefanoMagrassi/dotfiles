@@ -20,3 +20,4 @@
 	last = log -1 HEAD
 	visual = !gitk
 	short = log --abbrev-commit --pretty=oneline
+	rmremote = git push origin --delete
