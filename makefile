@@ -1,4 +1,4 @@
-all: bash eslint git jsbeautify vim tns
+all: bash eslint git npm jsbeautify vim tns
 
 bash:
 	rm -f ~/.bash_aliases
@@ -21,6 +21,10 @@ eslint:
 git:
 	rm -f ~/.gitconfig
 	ln -s $(PWD)/.gitconfig ~/.gitconfig
+
+npm:
+	rm -f ~/.npmrc
+	ln -s $(PWD)/.npmrc ~/.npmrc
 
 jsbeautify:
 	rm -f ~/.jsbeautifyrc
