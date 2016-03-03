@@ -81,3 +81,9 @@ fi
 if [ -f /etc/profile.d/vte.sh ]; then
   . /etc/profile.d/vte.sh
 fi
+
+###-tns-completion-start-###
+if [ -f /home/magrassi-nexxa/.tnsrc ]; then 
+    source /home/magrassi-nexxa/.tnsrc 
+fi
+###-tns-completion-end-###
