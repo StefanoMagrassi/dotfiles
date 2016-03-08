@@ -1,4 +1,4 @@
-all: bash eslint git npm jsbeautify vim tns
+all: bash eslint git npm jsbeautify vim tns csscomb
 
 bash:
 	rm -f ~/.bash_aliases
@@ -37,3 +37,7 @@ vim:
 tns:
 	rm -f ~/.tnsrc
 	ln -s $(PWD)/.tnsrc ~/.tnsrc
+
+csscomb:
+	rm -f ~/.csscomb.json
+	ln -s $(PWD)/.csscomb.json ~/.csscomb.json
