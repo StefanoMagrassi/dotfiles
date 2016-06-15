@@ -10,4 +10,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #alias composer='/usr/local/bin/composer/composer.phar'
 
 # Test network
-alias net='wget --spider http://www.google.com'
+alias tnet='wget --spider http://www.google.com'
