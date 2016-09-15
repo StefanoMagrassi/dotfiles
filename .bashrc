@@ -3,13 +3,14 @@
 
 ## ENV VARS
 ## --------
+# Environment variables first of all.
 if [ -f ~/.envvars ]; then
   . ~/.envvars
 fi
 
 ## HITS
 ## ----
-# don't put duplicate lines or lines starting with space in the history.
+# Don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -59,11 +60,6 @@ if [ -f /etc/bash_completion.d/git-completion ]; then
   . /etc/bash_completion.d/git-completion
 fi
 
-# Native Script - tns completion
-if [ -f ~/.tnsrc ]; then
-source ~/.tnsrc
-fi
-
 ## COLORS
 ## ------
 if [ -f ~/.bash_colors ]; then
@@ -81,9 +77,3 @@ fi
 if [ -f /etc/profile.d/vte.sh ]; then
   . /etc/profile.d/vte.sh
 fi
-
-###-tns-completion-start-###
-if [ -f /home/magrassi-nexxa/.tnsrc ]; then 
-    source /home/magrassi-nexxa/.tnsrc 
-fi
-###-tns-completion-end-###
