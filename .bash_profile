@@ -10,9 +10,3 @@ fi
 if [ -f "$HOME/.bashrc" ]; then
   . "$HOME/.bashrc"
 fi
-
-###-tns-completion-start-###
-if [ -f /home/magrassi-nexxa/.tnsrc ]; then 
-    source /home/magrassi-nexxa/.tnsrc 
-fi
-###-tns-completion-end-###
