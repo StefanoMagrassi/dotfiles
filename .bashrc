@@ -4,8 +4,8 @@
 ## ENV VARS
 ## --------
 # Environment variables first of all.
-if [ -f ~/.envvars ]; then
-  . ~/.envvars
+if [ -f "$HOME/.envvars" ]; then
+  . "$HOME/.envvars"
 fi
 
 ## HITS
@@ -62,14 +62,14 @@ fi
 
 ## COLORS
 ## ------
-if [ -f ~/.bash_colors ]; then
-  . ~/.bash_colors
+if [ -f "$HOME/.bash_colors" ]; then
+  . "$HOME/.bash_colors"
 fi
 
 ## ALIASES
 ## -------
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+  . "$HOME/.bash_aliases"
 fi
 
 ## VTE
