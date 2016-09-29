@@ -90,7 +90,7 @@ set number
 highlight LineNr ctermfg=DarkGrey ctermbg=none guifg=DarkGrey guibg=none
 
 " Cursor
-highlight CursorLine cterm=bold ctermbg=none ctermfg=none
+highlight CursorLine cterm=none ctermbg=DarkMagenta ctermfg=none
 set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
