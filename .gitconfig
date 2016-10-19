@@ -21,3 +21,5 @@
 	visual = !gitk
 	short = log --abbrev-commit --pretty=oneline
 	rmremote = push origin --delete
+[mergetool]
+	keepBackup = false
