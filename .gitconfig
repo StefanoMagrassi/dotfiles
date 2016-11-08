@@ -15,7 +15,8 @@
 	co = checkout
 	br = branch
 	ci = commit
-	st = status
+  st = status
+  lg = log --oneline -n10
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	visual = !gitk
