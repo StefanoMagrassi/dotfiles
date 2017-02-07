@@ -12,7 +12,7 @@
 [color]
 	ui = auto
 [alias]
-  pullr = pull --rebase
+  pr = pull --rebase
   co = checkout
 	br = branch
 	ci = commit
