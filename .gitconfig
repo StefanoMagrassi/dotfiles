@@ -12,7 +12,8 @@
 [color]
 	ui = auto
 [alias]
-	co = checkout
+  pullr = pull --rebase
+  co = checkout
 	br = branch
 	ci = commit
   st = status
