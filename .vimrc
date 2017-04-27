@@ -5,6 +5,7 @@
 set history=700
 
 " Enable filetype plugins
+filetype on
 filetype plugin on
 filetype indent on
 
@@ -79,8 +80,12 @@ endtry
 
 set background=dark
 
+" Tell vim that your terminal supports 256 colors
+set t_Co=256
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+set fileencoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
