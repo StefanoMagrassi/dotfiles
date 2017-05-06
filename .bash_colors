@@ -9,7 +9,8 @@ fi
 
 if [ "$colored_term" = yes ]; then
   #PS1=$'\n\u03BB \[\e[01;32m\]\u@\h\[\e[00m\] \u2192 \[\e[01;34m\]\w\[\e[00m\] $(__git_ps1 "\u2387 %s")\n\$ '
-  PS1=$'\n\u03BB \[\e[01;32m\]\u\[\e[00m\] \u2192 \[\e[01;34m\]\w\[\e[00m\] $(__git_ps1 "\u2387 %s")\n\$ '
+  #PS1=$'\n\u03BB \[\e[01;32m\]\u\[\e[00m\] \u2192 \[\e[01;34m\]\w\[\e[00m\] $(__git_ps1 "\u2387 %s")\n\$ '
+  PS1=$'\n\u03BB \[\e[92m\]\u\[\e[m\] \u2192 \[\e[95m\]\w\[\e[m\] $(__git_ps1 "\u2387 %s")\n\$ '
 else
   PS1='\n\u@\h:\w $(__git_ps1 '%s')\n\$ '
 fi
