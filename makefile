@@ -42,3 +42,7 @@ csscomb:
 stylelint:
 	rm -f ~/.stylelintrc
 	ln -s $(PWD)/.stylelintrc ~/.stylelintrc
+
+yarn:
+	rm -f ~/.yarnrc
+	cp ${PWD}/.yarnrc ~/.yarnrc
