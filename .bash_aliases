@@ -11,6 +11,3 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Test network
 alias tnet='wget --spider http://www.google.com'
-
-# Android emulators
-alias emu51='emulator @android5.1'
