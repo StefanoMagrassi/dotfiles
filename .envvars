@@ -1,4 +1,5 @@
-export COMPOSER_HOME=$HOME/.composer
+#export COMPOSER_HOME=$HOME/.composer
 export LOCAL_HOME=$HOME/.local
-export PATH=$LOCAL_HOME/bin:$COMPOSER_HOME/vendor/bin:$PATH
-export NODE_PATH=$NODE_PATH:$LOCAL_HOME/lib/node_modules
+#export PATH=$LOCAL_HOME/bin:$COMPOSER_HOME/vendor/bin:$PATH
+export PATH=$LOCAL_HOME/bin:$PATH
+export NODE_PATH=$LOCAL_HOME/lib/node_modules:$NODE_PATH
