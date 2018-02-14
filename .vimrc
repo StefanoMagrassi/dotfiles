@@ -98,6 +98,9 @@ highlight LineNr ctermfg=DarkGrey ctermbg=none guifg=DarkGrey guibg=none
 highlight CursorLine cterm=none ctermbg=DarkMagenta ctermfg=none
 set cursorline
 
+" Line wrap color column
+highlight ColorColumn ctermfg=none ctermbg=LightGrey guifg=none guibg=LightGrey
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -119,9 +122,10 @@ set smarttab
 set shiftwidth=2
 set tabstop=2
 
-" Linebreak on 500 characters
+" Linebreak on 500 characters + color column
 set lbr
-set tw=500
+set tw=120
+set colorcolumn=+1
 
 set ai "Auto indent
 set si "Smart indent
