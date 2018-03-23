@@ -1,27 +1,27 @@
 [user]
-	name = StefanoMagrassi
-	email = stefano.magrassi@gmail.com
+  name = StefanoMagrassi
+  email = stefano.magrassi@gmail.com
 [core]
-	editor = vim
+  editor = vim
 [push]
-	default = simple
+  default = simple
 [merge]
-	tool = meld
+  tool = meld
 [diff]
-	tool = meld
+  tool = meld
 [color]
-	ui = auto
+  ui = auto
 [alias]
   pr = pull --rebase
   co = checkout
-	br = branch
-	ci = commit
+  br = branch
+  ci = commit
   st = status
   lg = log --oneline -n10
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = !gitk
-	short = log --abbrev-commit --pretty=oneline
-	rmremote = push origin --delete
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  visual = !gitk
+  short = log --abbrev-commit --pretty=oneline
+  rmremote = push origin --delete
 [mergetool]
-	keepBackup = false
+  keepBackup = false
