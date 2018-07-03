@@ -78,6 +78,12 @@ if [ -f /etc/profile.d/vte.sh ]; then
   . /etc/profile.d/vte.sh
 fi
 
+## STARTUP
+## -------
+if [ -f "$HOME/.bash_startup" ]; then
+  . "$HOME/.bash_startup"
+fi
+
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [ -f /home/developer/.local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash ] && . /home/developer/.local/lib/node_modules/yarn-completions/node_modules/tabtab/.completions/yarn.bash
