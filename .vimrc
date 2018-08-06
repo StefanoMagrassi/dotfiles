@@ -92,14 +92,14 @@ set ffs=unix,dos,mac
 
 " Line numbers
 set number
-highlight LineNr ctermfg=DarkGrey ctermbg=none guifg=DarkGrey guibg=none
+highlight LineNr ctermfg=DarkGrey ctermbg=NONE guifg=DarkGrey guibg=NONE
 
 " Cursor
-highlight CursorLine cterm=none ctermbg=DarkMagenta ctermfg=none
+highlight CursorLine cterm=NONE ctermbg=DarkMagenta ctermfg=NONE
 set cursorline
 
 " Line wrap color column
-highlight ColorColumn ctermfg=none ctermbg=LightGrey guifg=none guibg=LightGrey
+highlight ColorColumn ctermfg=NONE ctermbg=LightGrey guifg=NONE guibg=LightGrey
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
