@@ -11,3 +11,12 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Test network
 alias tnet='wget --spider http://www.google.com'
+
+# Starters - Need `nohup` bin
+NOHUPOUT="${HOME}/nohup.out"
+
+alias startff='nohup firefox-dev > $NOHUOUT &'
+alias startmeld='nohup meld > $NOHUPOUT &'
+alias startchrome='nohup google-chrome-stable > $NOHUPOUT &'
+alias startpm='nohup postman > $NOHUPOUT &'
+
