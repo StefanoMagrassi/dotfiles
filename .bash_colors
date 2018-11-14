@@ -8,8 +8,6 @@ else
 fi
 
 if [ "$colored_term" = yes ]; then
-  #PS1=$'\n\u03BB \[\e[01;32m\]\u@\h\[\e[00m\] \u2192 \[\e[01;34m\]\w\[\e[00m\] $(__git_ps1 "\u2387 %s")\n\$ '
-  #PS1=$'\n\u03BB \[\e[01;32m\]\u\[\e[00m\] \u2192 \[\e[01;34m\]\w\[\e[00m\] $(__git_ps1 "\u2387 %s")\n\$ '
   PS1=$'\n\u03BB \[\e[92m\]\u\[\e[m\] \u2192 \[\e[95m\]\w\[\e[m\] $(__git_ps1 "\u2387 %s")\n\$ '
 else
   PS1='\n\u@\h:\w $(__git_ps1 '%s')\n\$ '
@@ -19,18 +17,12 @@ unset colored_term
 
 # Enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
-
-# Colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Listing colors - avoid green background effect for OW
 export LS_COLORS=$LS_COLORS'ow=34;01'

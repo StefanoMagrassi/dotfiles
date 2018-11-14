@@ -1,3 +1,3 @@
-export LOCAL_HOME=$HOME/.local
-export PATH=$LOCAL_HOME/bin:$PATH
-export NODE_PATH=$LOCAL_HOME/lib/node_modules:$NODE_PATH
+export HOME_LOCAL=$HOME/.local
+export PATH=$HOME_LOCAL/bin:$PATH
+export NODE_PATH=$HOME_LOCAL/lib/node_modules:$NODE_PATH

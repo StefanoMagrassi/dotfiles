@@ -1,4 +1,3 @@
-#all: bash eslint git jsbeautify vim
 all: bash eslint git vim yarn
 
 bash:
@@ -26,10 +25,6 @@ git:
 npm:
 	rm -f ~/.npmrc
 	cp $(PWD)/.npmrc ~/.npmrc
-
-jsbeautify:
-	rm -f ~/.jsbeautifyrc
-	ln -s $(PWD)/.jsbeautifyrc ~/.jsbeautifyrc
 
 vim:
 	rm -f ~/.vimrc
