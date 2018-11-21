@@ -84,3 +84,11 @@ if [ -f "$HOME/.bash_startup" ]; then
   . "$HOME/.bash_startup"
 fi
 
+## NODENV
+## ------
+if [ type nodenv &> /dev/null ]; then
+  export PATH=$HOME/.nodenv/bin:$PATH
+
+  eval "$(nodenv init -)"
+fi
+
