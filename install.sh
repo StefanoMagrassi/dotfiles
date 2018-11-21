@@ -17,6 +17,7 @@ echo ""
 apt-get update && apt-get install -y \
   apt-transport-https \
   build-essential \
+  cmake \
   cron \
   curl \
   git \
@@ -34,6 +35,7 @@ apt-get update && apt-get install -y \
   openssl \
   python \
   python3 \
+  python3-dev \
   rsync \
   sed \
   tar \
