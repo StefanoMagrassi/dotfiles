@@ -70,6 +70,10 @@ install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list
 apt-get update && apt-get install -y code
 
+# --- Git completion
+curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+mv git-completion.bash /etc/bash_completion.d/
+
 echo ""
 echo "###############"
 echo "               "
