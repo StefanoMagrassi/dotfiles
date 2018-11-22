@@ -1,6 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set hidden
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -71,12 +73,6 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable
-
-try
-    "colorscheme desert
-    colorscheme atom-dark
-catch
-endtry
 
 set background=dark
 
