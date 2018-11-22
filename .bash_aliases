@@ -7,7 +7,7 @@ alias l='ls -CF'
 alias tnet='wget --spider http://www.google.com'
 
 # Starters - Need `nohup` bin
-if [ type "nohup" &> /dev/null ]; then
+if command_exists nohup ; then
   alias startff='nohup firefox-dev > $HOME/nohup.out &'
   alias startmeld='nohup meld > $HOME/nohup.out &'
   alias startchrome='nohup google-chrome-stable > $HOME/nohup.out &'
