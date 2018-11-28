@@ -30,6 +30,7 @@ apt-get update && apt-get install -y \
   meld \
   net-tools \
   nginx \
+  openjdk-11-jdk \
   openssh-client \
   openssh-server \
   openssl \
