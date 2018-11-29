@@ -219,7 +219,7 @@ let NERDTreeShowHidden = 1
 
 augroup NERD
   au!
-  autocmd VimEnter * NERDTree
+  "autocmd VimEnter * NERDTree
   autocmd VimEnter * wincmd p
 augroup END
 
