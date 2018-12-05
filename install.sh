@@ -52,7 +52,7 @@ apt-get update && apt-get install -y \
 NODE_VERSION=node_10.x
 DISTRO="$(lsb_release -s -c)"
 
-echo "deb https://deb.nodesource.com/$VERSION $DISTRO main" > /etc/apt/sources.list.d/nodesource.list
+echo "deb https://deb.nodesource.com/$NODE_VERSION $DISTRO main" > /etc/apt/sources.list.d/nodesource.list
 apt-get update && apt-get install -y nodejs
 
 # --- Install Google Chrome
