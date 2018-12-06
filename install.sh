@@ -52,6 +52,7 @@ apt-get update && apt-get install -y \
 NODE_VERSION=node_10.x
 DISTRO="$(lsb_release -s -c)"
 
+curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 echo "deb https://deb.nodesource.com/$NODE_VERSION $DISTRO main" > /etc/apt/sources.list.d/nodesource.list
 apt-get update && apt-get install -y nodejs
 
