@@ -73,7 +73,7 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" 
 apt-get update && apt-get install -y code
 
 # --- Git completion
-curl -O https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+curl -O https://raw.githubusercontent.com/git/git/v2.17.1/contrib/completion/git-completion.bash
 mv git-completion.bash /etc/bash_completion.d/
 
 echo ""
