@@ -1,4 +1,4 @@
-all: bash eslint git vim yarn
+all: bash eslint git npm vim yarn
 
 bash:
 	rm -f ~/.bash_aliases
