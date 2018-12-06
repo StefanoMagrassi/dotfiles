@@ -98,3 +98,9 @@ if command_exists nodenv ; then
   eval "$(nodenv init -)"
 fi
 
+## COMPLETIONS
+## -----------
+if [ -f "$HOME/.bash_completions" ]; then
+  . "$HOME/.bash_completions"
+fi
+
