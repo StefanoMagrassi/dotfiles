@@ -3,3 +3,5 @@
 export HOME_LOCAL=$HOME/.local
 export PATH=$HOME_LOCAL/bin:$PATH
 export NODE_PATH=$HOME_LOCAL/lib/node_modules:$NODE_PATH
+
+export POSTMAN_DISABLE_GPU=true
