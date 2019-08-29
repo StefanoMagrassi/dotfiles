@@ -17,7 +17,6 @@ echo ""
 apt-get update && apt-get install -y \
   apt-transport-https \
   build-essential \
-  cmake \
   cron \
   curl \
   git \
@@ -29,7 +28,6 @@ apt-get update && apt-get install -y \
   manpages \
   meld \
   net-tools \
-  nginx \
   openjdk-11-jdk \
   openssh-client \
   openssh-server \
@@ -41,12 +39,12 @@ apt-get update && apt-get install -y \
   sed \
   tar \
   telnet \
-  terminator \
   tzdata \
   vim \
   wget \
   xvfb \
-  zip
+  zip \
+  unzip
 
 # --- Install Nodejs
 NODE_VERSION=node_10.x
