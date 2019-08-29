@@ -1,4 +1,4 @@
-all: bash eslint git npm vim yarn
+all: bash git npm vim yarn
 
 bash:
 	rm -f ~/.bash_aliases
@@ -13,10 +13,6 @@ bash:
 	ln -s $(PWD)/.envvars ~/.envvars
 	rm -f ~/.profile
 	ln -s $(PWD)/.profile ~/.profile
-
-eslint:
-	rm -f ~/.eslintrc
-	ln -s $(PWD)/.eslintrc ~/.eslintrc
 
 git:
 	rm -f ~/.gitconfig
