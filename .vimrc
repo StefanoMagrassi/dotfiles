@@ -22,14 +22,9 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'townk/vim-autoclose'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Quramy/tsuquyomi'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'jdkanani/vim-material-theme'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
@@ -111,11 +106,6 @@ set tm=500
 syntax enable
 
 set background=dark
-
-try
-	"colorscheme material-theme
-catch
-endtry
 
 " Tell vim that your terminal supports 256 colors
 set t_Co=256
@@ -208,24 +198,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_typescript_checkers = ['tslint']
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
 let g:syntastic_json_checkers = ['jsonlint']
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let NERDTreeShowHidden = 1
-
-augroup NERD
-  au!
-  "autocmd VimEnter * NERDTree
-  autocmd VimEnter * wincmd p
-augroup END
-
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-map <C-n> :NERDTreeToggle<CR>
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 
