@@ -1,12 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # @see /usr/share/doc/bash/examples/startup-files
 
-## UTILS
-## -----
-command_exists() {
-  command -v "$1" >/dev/null 2>&1
-}
-
 ## ENV VARS
 ## --------
 # Environment variables first of all.
@@ -88,14 +82,6 @@ fi
 ## -------
 if [ -f "$HOME/.bash_startup" ]; then
   . "$HOME/.bash_startup"
-fi
-
-## NODENV
-## ------
-if command_exists nodenv ; then
-  export PATH=$HOME/.nodenv/bin:$PATH
-
-  eval "$(nodenv init -)"
 fi
 
 ## COMPLETIONS
