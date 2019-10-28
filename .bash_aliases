@@ -13,3 +13,8 @@ if command_exists nohup ; then
   alias startchrome='nohup google-chrome-stable > $HOME/nohup.out &'
   alias startpm='nohup postman > $HOME/nohup.out &'
 fi
+
+# Directories shortcuts
+alias gh='cd ~/dev/gh'
+alias azd='cd ~/dev/azd'
+alias local='cd ~/dev/local'
