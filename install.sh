@@ -24,6 +24,7 @@ apt-get update && apt-get install -y \
   ca-certificates \
   cron \
   curl \
+  gimp \
   git \
   git-man \
   gitk \
