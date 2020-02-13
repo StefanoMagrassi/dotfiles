@@ -1,4 +1,4 @@
-all: bash git npm vim terminator
+all: bash git npm vim fonts terminator
 
 bash:
 	rm -f ~/.bash_aliases
@@ -30,6 +30,9 @@ vim:
 	rm -f ~/.vimrc
 	ln -s $(PWD)/.vimrc ~/.vimrc
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+fonts:
+	cp -R $(PWD)/fonts/* ~/.local/share/fonts/
 
 terminator:
 	rm -f ~/.config/terminator/config
