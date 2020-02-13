@@ -1,8 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible	" required
-filetype off 			" required
+set nocompatible  " required
+filetype off      " required
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -16,8 +16,6 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'BufOnly.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'townk/vim-autoclose'
@@ -54,7 +52,7 @@ set so=7
 " Turn on the WiLd menu
 set wildmenu
 
-"Always show current position
+" Always show current position
 set ruler
 
 " Height of the command bar
@@ -86,7 +84,8 @@ set lazyredraw
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -158,7 +157,6 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -167,6 +165,7 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
 " Remember info about open buffers on close
 set viminfo^=%
 
@@ -182,12 +181,6 @@ set viminfo^=%
 let g:typescript_indent_disable = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => YouCompleteMe
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => syntastic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
@@ -198,7 +191,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint', 'flow']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_json_checkers = ['jsonlint']
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.

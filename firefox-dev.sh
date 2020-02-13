@@ -1,4 +1,10 @@
-#!/usr/bin/env bash
+#! /bin/bash
+
+TARGET=/opt/firefox-dev
+UNZIPPED=firefox
+BIN=/usr/bin/firefox-dev
+APP=/usr/share/applications/firefox-dev.desktop
+MIME_TYPES="text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;"
 
 # ---
 # Reference: https://www.rogerpence.com/posts/a-bash-script-to-install-firefox-dev-edition
@@ -13,9 +19,9 @@ rm releases.txt
 FILE=firefox-$VERSION.tar.bz2
 
 # Create /opt/firefox-dev if it doesn't exist.
-if [ ! -d "/opt/firefox-dev" ]
+if [ ! -d $TARGET ]
 then 
-	mkdir /opt/firefox-dev
+	mkdir $TARGET
 fi
 
 # Get Firefox download.
@@ -25,8 +31,8 @@ curl -o $FILE https://download-installer.cdn.mozilla.net/pub/devedition/releases
 if grep -iq '404 Not found' $FILE 
 then
 	clear
-  echo Error...
-  echo $FILE did not download.
+	echo Error...
+	echo $FILE did not download.
 	rm $FILE
 
 else
@@ -34,17 +40,46 @@ else
 	tar xvjf $FILE
 
 	# Clear the target directory.
-	rm -rf /opt/firefox-dev/*
+	rm -rf ${TARGET}/*
+	rm -f $BIN
+	rm -f $APP
 
 	# Move the program files to the target directory.
-	mv firefox/* /opt/firefox-dev
+	mv ${UNZIPPED}/* $TARGET
 
 	# Remove the unzipped install folder.
-	rm -rf firefox
+	rm -rf $UNZIPPED
 
 	# Remove the install file.
 	rm $FILE
 
-	echo Firefox Dev Edition $1 installed.
+	# Create bin symlink
+	ln -s ${TARGET}/firefox $BIN
 
+	# Create .desktop application
+	echo "[Desktop Entry]" >> $APP
+	echo "Name=Firefox Dev" >> $APP
+	echo "GenericName=Firefox Developer Edition" >> $APP
+	echo "Exec=firefox-dev %u" >> $APP
+	echo "StartupNotify=true" >> $APP
+	echo "Terminal=false" >> $APP
+	echo "X-MultipleArgs=false" >> $APP
+	echo "Icon=${TARGET}/browser/chrome/icons/default/default128.png" >> $APP
+	echo "MimeType=${MIME_TYPES}" >> $APP
+	echo "Type=Application" >> $APP
+	echo "Categories=Application;Network;Development;WebBrowser" >> $APP
+	echo "Comment=Firefox Developer Edition Web Browser" >> $APP
+	echo "Actions=new-window;new-private-window;" >> $APP
+	echo "" >> $APP
+	echo "Path=" >> $APP
+	echo "" >> $APP
+	echo "[Desktop Action new-window]" >> $APP
+	echo "Name=Open a New Window" >> $APP
+	echo "Exec=firefox-dev -new-window" >> $APP
+	echo "" >> $APP
+	echo "[Desktop Action new-private-window]" >> $APP
+	echo "Name=Open a New Private Window" >> $APP
+	echo "Exec=firefox-dev -private-window" >> $APP
+
+	echo "Firefox Dev Edition $1 installed."
 fi

@@ -1,4 +1,4 @@
-all: bash git npm vim yarn
+all: bash git npm vim terminator
 
 bash:
 	rm -f ~/.bash_aliases
@@ -21,12 +21,26 @@ git:
 npm:
 	rm -f ~/.npmrc
 	cp $(PWD)/.npmrc ~/.npmrc
+	# Install npm itselt as global package
+	npm i -g npm
+	# Install utility packages
+	npm i -g http-server now npm-check
 
 vim:
 	rm -f ~/.vimrc
 	ln -s $(PWD)/.vimrc ~/.vimrc
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-yarn:
-	rm -f ~/.yarnrc
-	cp ${PWD}/.yarnrc ~/.yarnrc
+terminator:
+	rm -f ~/.config/terminator/config
+	cp $(PWD)/terminator.config ~/.config/terminator/config
+
+xfce:
+	rm -f ~/.config/xfce4/terminal/terminalrc
+	cp $(PWD)/xfce4.terminal.terminalrc ~/.config/xfce4/terminal/terminalrc
+	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfc4-panel.xml
+	cp $(PWD)/xfce4.xfconf.xfc4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfc4-panel.xml
+	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
+	cp $(PWD)/xfce4.xfconf.thunar.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
+	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+	cp $(PWD)/xfce4.xfconf.xsettings.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml

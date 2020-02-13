@@ -46,10 +46,10 @@ apt-get update && apt-get install -y \
   software-properties-common \
   tar \
   telnet \
+  terminator \
   tzdata \
   vim \
   wget \
-  xvfb \
   zip \
   unzip
 
@@ -71,11 +71,6 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
 echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
 apt-get update && apt-get install -y google-chrome-stable
 
-# --- Install Yarn
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
-apt-get update && apt-get install -y yarn
-
 # --- Install VSCode
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -94,6 +89,9 @@ apt-get update && apt-get install -y numix-icon-theme-circle
 # --- Git completion
 curl -O https://raw.githubusercontent.com/git/git/v2.17.1/contrib/completion/git-completion.bash
 mv git-completion.bash /etc/bash_completion.d/
+
+# --- Install Postman
+source ./postman.sh
 
 echo ""
 echo "###############"
