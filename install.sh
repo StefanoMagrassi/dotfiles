@@ -54,9 +54,6 @@ apt-get update && apt-get install -y \
   zip \
   unzip
 
-# --- Install Firefox Dev Edition
-source ./firefox-dev.sh
-
 # --- Install Docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $DISTRO stable"
@@ -90,9 +87,6 @@ apt-get update && apt-get install -y numix-icon-theme-circle
 # --- Git completion
 curl -O https://raw.githubusercontent.com/git/git/v2.17.1/contrib/completion/git-completion.bash
 mv git-completion.bash /etc/bash_completion.d/
-
-# --- Install Postman
-source ./postman.sh
 
 echo ""
 echo "###############"

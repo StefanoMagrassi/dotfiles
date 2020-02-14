@@ -1,9 +1,9 @@
 #! /bin/bash
 
-TARGET=/opt/firefox-dev
+TARGET=~/.local/share/firefox-dev
 UNZIPPED=firefox
-BIN=/usr/bin/firefox-dev
-APP=/usr/share/applications/firefox-dev.desktop
+BIN=~/.local/bin/firefox-dev
+APP=~/.local/share/applications/firefox-dev.desktop
 MIME_TYPES="text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;"
 
 # ---

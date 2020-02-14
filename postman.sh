@@ -2,10 +2,10 @@
 
 # Set downloaded file name
 FILE=postman-latest.tar.gz
-TARGET=/opt/postman
+TARGET=~/.local/share/postman
 UNZIPPED=Postman
-BIN=/usr/bin/postman
-APP=/usr/share/applications/postman.desktop
+BIN=~/.local/bin/postman
+APP=~/.local/share/applications/postman.desktop
 
 # Create /opt/postman if it doesn't exist.
 if [ ! -d $TARGET ]

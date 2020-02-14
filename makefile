@@ -1,4 +1,4 @@
-all: bash git npm vim fonts terminator
+all: bash git npm vim fonts terminator firefox postman
 
 bash:
 	rm -f ~/.bash_aliases
@@ -37,6 +37,12 @@ fonts:
 terminator:
 	rm -f ~/.config/terminator/config
 	cp $(PWD)/terminator.config ~/.config/terminator/config
+
+firefox:
+	$(PWD)/firefox-dev.sh
+
+postman:
+	$(PWD)/postman.sh
 
 xfce:
 	rm -f ~/.config/xfce4/terminal/terminalrc
