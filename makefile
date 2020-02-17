@@ -1,3 +1,5 @@
+.PHONY: all bash git npm vim fonts terminator firefox postman
+
 all: bash git npm vim fonts terminator firefox postman
 
 bash:
@@ -36,7 +38,7 @@ fonts:
 
 terminator:
 	rm -f ~/.config/terminator/config
-	cp $(PWD)/terminator.config ~/.config/terminator/config
+	ln -s $(PWD)/terminator/config ~/.config/terminator/config
 
 firefox:
 	$(PWD)/firefox-dev.sh
