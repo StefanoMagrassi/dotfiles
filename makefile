@@ -39,7 +39,7 @@ fonts:
 
 terminator:
 	rm -f ~/.config/terminator/config
-	mkdir -p ~/.config/terminator/config
+	mkdir -p ~/.config/terminator
 	ln -s $(PWD)/terminator/config ~/.config/terminator/config
 
 firefox:
