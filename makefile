@@ -34,6 +34,7 @@ vim:
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 fonts:
+	mkdir -p ~/.local/share/fonts 
 	cp -R $(PWD)/fonts/* ~/.local/share/fonts/
 
 terminator:
