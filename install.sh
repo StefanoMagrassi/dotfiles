@@ -81,7 +81,7 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $DISTRO m
 apt-get update && apt-get install -y azure-cli
 
 # --- Install Numix
-echo "deb http://ppa.launchpad.net/numix/ppa/ubuntu bionic main" > /etc/apt/source.list.d/numix-ubuntu-ppa-bionic.list
+echo "deb http://ppa.launchpad.net/numix/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/numix-ubuntu-ppa-bionic.list
 apt-get update && apt-get install -y numix-icon-theme-circle
 
 # --- Git completion
