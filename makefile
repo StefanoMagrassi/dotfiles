@@ -39,6 +39,7 @@ fonts:
 
 terminator:
 	rm -f ~/.config/terminator/config
+	mkdir -p ~/.config/terminator/config
 	ln -s $(PWD)/terminator/config ~/.config/terminator/config
 
 firefox:
@@ -48,6 +49,7 @@ postman:
 	$(PWD)/postman.sh
 
 xfce:
+	mkdir -p ~/.config/xfce4/terminal
 	rm -f ~/.config/xfce4/terminal/terminalrc
 	cp $(PWD)/xfce4.terminal.terminalrc ~/.config/xfce4/terminal/terminalrc
 	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfc4-panel.xml
