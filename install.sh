@@ -85,7 +85,7 @@ echo "deb http://ppa.launchpad.net/numix/ppa/ubuntu bionic main" > /etc/apt/sour
 apt-get update && apt-get install -y numix-icon-theme-circle
 
 # --- Git completion
-curl -O https://raw.githubusercontent.com/git/git/v2.17.1/contrib/completion/git-completion.bash
+curl -O https://raw.githubusercontent.com/git/git/v2.25.1/contrib/completion/git-completion.bash
 mv git-completion.bash /etc/bash_completion.d/
 
 echo ""
