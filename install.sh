@@ -35,6 +35,7 @@ apt-get update && apt-get install -y \
   manpages \
   meld \
   net-tools \
+  numix-icon-theme-circle \
   openjdk-11-jdk \
   openssh-client \
   openssh-server \
@@ -79,10 +80,6 @@ apt-get update && apt-get install -y code
 curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $DISTRO main" > /etc/apt/sources.list.d/azure-cli.list
 apt-get update && apt-get install -y azure-cli
-
-# --- Install Numix
-echo "deb http://ppa.launchpad.net/numix/ppa/ubuntu bionic main" > /etc/apt/sources.list.d/numix-ubuntu-ppa-bionic.list
-apt-get update && apt-get install -y numix-icon-theme-circle
 
 # --- Git completion
 curl -O https://raw.githubusercontent.com/git/git/v2.25.1/contrib/completion/git-completion.bash
