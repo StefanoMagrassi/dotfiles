@@ -1,10 +1,24 @@
 [global_config]
-  always_split_with_profile = True
   title_hide_sizetext = True
+  always_split_with_profile = True
 [keybindings]
+  toggle_scrollbar = <Primary><Alt>a
   edit_tab_title = <Primary><Shift>s
   edit_terminal_title = <Primary><Alt>x
-  toggle_scrollbar = <Primary><Alt>a
+[profiles]
+  [[default]]
+    icon_bell = False
+    background_color = "#131926"
+    background_darkness = 0.95
+    background_type = transparent
+    cursor_shape = ibeam
+    cursor_color = "#aaaaaa"
+    foreground_color = "#d3dae3"
+    show_titlebar = False
+    scrollback_lines = 1000
+    scrollback_infinite = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    custom_command = /bin/bash
 [layouts]
   [[default]]
     [[[child1]]]
@@ -16,17 +30,3 @@
       type = Window
       size = 1454, 962
 [plugins]
-[profiles]
-  [[default]]
-    background_color = "#131926"
-    background_darkness = 0.95
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    cursor_shape = ibeam
-    custom_command = /bin/bash
-    foreground_color = "#d3dae3"
-    icon_bell = False
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
-    scrollback_infinite = True
-    scrollback_lines = 1000
-    show_titlebar = False
