@@ -14,7 +14,7 @@ echo "------------------------------------------"
 echo ""
 
 DISTRO="$(lsb_release -s -c)"
-NODE_VERSION=node_12.x
+NODE_VERSION=node_14.x
 
 # --- Install common packages
 apt-get update && apt-get install -y \
