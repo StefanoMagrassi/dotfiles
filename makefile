@@ -1,6 +1,6 @@
 .PHONY: all bash git npm vim fonts terminator firefox postman
 
-all: bash git npm vim fonts terminator firefox postman
+all: bash git npm vim terminator firefox
 
 bash:
 	rm -f ~/.bash_aliases
@@ -33,10 +33,6 @@ vim:
 	ln -s $(PWD)/.vimrc ~/.vimrc
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-fonts:
-	mkdir -p ~/.local/share/fonts 
-	cp -R $(PWD)/fonts/* ~/.local/share/fonts/
-
 terminator:
 	rm -f ~/.config/terminator/config
 	mkdir -p ~/.config/terminator
@@ -44,9 +40,6 @@ terminator:
 
 firefox:
 	$(PWD)/firefox-dev.sh
-
-postman:
-	$(PWD)/postman.sh
 
 xfce:
 	mkdir -p ~/.config/xfce4/terminal

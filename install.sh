@@ -46,6 +46,7 @@ apt-get update && apt-get install -y \
   rsync \
   sed \
   software-properties-common \
+  snapd \
   tar \
   telnet \
   terminator \
@@ -83,7 +84,10 @@ apt-get update && apt-get install -y azure-cli
 
 # --- Git completion
 curl -O https://raw.githubusercontent.com/git/git/v2.25.1/contrib/completion/git-completion.bash
-mv git-completion.bash /etc/bash_completion.d/
+mv git-coimpletion.bash /etc/bash_completion.d/
+
+# --- Install Postman via snap
+snap install postman
 
 echo ""
 echo "###############"
