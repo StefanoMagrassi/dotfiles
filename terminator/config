@@ -14,7 +14,6 @@
     cursor_shape = ibeam
     cursor_color = "#aaaaaa"
     foreground_color = "#d3dae3"
-    show_titlebar = False
     scrollback_lines = 1000
     scrollback_infinite = True
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
