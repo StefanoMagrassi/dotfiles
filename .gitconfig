@@ -24,5 +24,6 @@
   short = log --abbrev-commit --pretty=oneline
   tree = log --graph --pretty=oneline --abbrev-commit
   rmremote = push origin --delete
+  mt = mergetool
 [mergetool]
   keepBackup = false
