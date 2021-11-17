@@ -1,4 +1,4 @@
-.PHONY: all bash git npm vim fonts terminator firefox postman
+.PHONY: all bash git npm vim terminator firefox
 
 all: bash git npm vim terminator firefox
 
