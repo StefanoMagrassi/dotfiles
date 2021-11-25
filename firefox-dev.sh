@@ -58,10 +58,12 @@ else
 
 	# Create .desktop application
 	echo "[Desktop Entry]" >> $APP
-	echo "Name=Firefox Dev" >> $APP
+	echo "Name=Firefox Developer Edition" >> $APP
 	echo "GenericName=Firefox Developer Edition" >> $APP
 	echo "Exec=firefox-dev %u" >> $APP
 	echo "StartupNotify=true" >> $APP
+	echo "StartupWMClass=Firefox Developer Edition" >> $APP
+  echo "NoDisplay=false" >> $APP
 	echo "Terminal=false" >> $APP
 	echo "X-MultipleArgs=false" >> $APP
 	echo "Icon=${TARGET}/browser/chrome/icons/default/default128.png" >> $APP
@@ -70,8 +72,6 @@ else
 	echo "Categories=Application;Network;Development;WebBrowser" >> $APP
 	echo "Comment=Firefox Developer Edition Web Browser" >> $APP
 	echo "Actions=new-window;new-private-window;" >> $APP
-	echo "" >> $APP
-	echo "Path=" >> $APP
 	echo "" >> $APP
 	echo "[Desktop Action new-window]" >> $APP
 	echo "Name=Open a New Window" >> $APP
