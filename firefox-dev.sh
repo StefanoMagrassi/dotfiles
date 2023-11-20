@@ -57,7 +57,7 @@ else
 	ln -s ${TARGET}/firefox $BIN
 
 	# Create .desktop application
-	echo "[Desktop Entry]" >> $APP
+  echo "[Desktop Entry]" >> $APP
 	echo "Name=Firefox Developer Edition" >> $APP
 	echo "GenericName=Firefox Developer Edition" >> $APP
 	echo "Exec=firefox-dev %u" >> $APP
