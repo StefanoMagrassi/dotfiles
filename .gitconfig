@@ -27,3 +27,5 @@
   mt = mergetool
 [mergetool]
   keepBackup = false
+[init]
+	defaultbranch = main

@@ -21,7 +21,7 @@ FILE=firefox-$VERSION.tar.bz2
 # Create /opt/firefox-dev if it doesn't exist.
 if [ ! -d $TARGET ]
 then 
-	mkdir $TARGET
+  mkdir $TARGET
 fi
 
 # Get Firefox download.
@@ -30,56 +30,56 @@ curl -o $FILE https://download-installer.cdn.mozilla.net/pub/devedition/releases
 # If you don't get the file you specified, you get an HTML file with a '404 Not found' text in it.
 if grep -iq '404 Not found' $FILE 
 then
-	clear
-	echo Error...
-	echo $FILE did not download.
-	rm $FILE
+  clear
+  echo Error...
+  echo $FILE did not download.
+  rm $FILE
 
 else
-	# Unzip the install file.
-	tar xvjf $FILE
+  # Unzip the install file.
+  tar xvjf $FILE
 
-	# Clear the target directory.
-	rm -rf ${TARGET}/*
-	rm -f $BIN
-	rm -f $APP
+  # Clear the target directory.
+  rm -rf ${TARGET}/*
+  rm -f $BIN
+  rm -f $APP
 
-	# Move the program files to the target directory.
-	mv ${UNZIPPED}/* $TARGET
+  # Move the program files to the target directory.
+  mv ${UNZIPPED}/* $TARGET
 
-	# Remove the unzipped install folder.
-	rm -rf $UNZIPPED
+  # Remove the unzipped install folder.
+  rm -rf $UNZIPPED
 
-	# Remove the install file.
-	rm $FILE
+  # Remove the install file.
+  rm $FILE
 
-	# Create bin symlink
-	ln -s ${TARGET}/firefox $BIN
+  # Create bin symlink
+  ln -s ${TARGET}/firefox $BIN
 
-	# Create .desktop application
+  # Create .desktop application
   echo "[Desktop Entry]" >> $APP
-	echo "Name=Firefox Developer Edition" >> $APP
-	echo "GenericName=Firefox Developer Edition" >> $APP
-	echo "Exec=firefox-dev %u" >> $APP
-	echo "StartupNotify=true" >> $APP
-	echo "StartupWMClass=firefox-aurora" >> $APP
+  echo "Name=Firefox Developer Edition" >> $APP
+  echo "GenericName=Firefox Developer Edition" >> $APP
+  echo "Exec=firefox-dev %u" >> $APP
+  echo "StartupNotify=true" >> $APP
+  echo "StartupWMClass=firefox-aurora" >> $APP
   echo "NoDisplay=false" >> $APP
-	echo "Terminal=false" >> $APP
-	echo "X-MultipleArgs=false" >> $APP
-	echo "Icon=${TARGET}/browser/chrome/icons/default/default128.png" >> $APP
-	echo "MimeType=${MIME_TYPES}" >> $APP
-	echo "Type=Application" >> $APP
-	echo "Categories=Application;Network;Development;WebBrowser" >> $APP
-	echo "Comment=Firefox Developer Edition Web Browser" >> $APP
-	echo "Actions=new-window;new-private-window;" >> $APP
-	echo "" >> $APP
-	echo "[Desktop Action new-window]" >> $APP
-	echo "Name=Open a New Window" >> $APP
-	echo "Exec=firefox-dev -new-window" >> $APP
-	echo "" >> $APP
-	echo "[Desktop Action new-private-window]" >> $APP
-	echo "Name=Open a New Private Window" >> $APP
-	echo "Exec=firefox-dev -private-window" >> $APP
+  echo "Terminal=false" >> $APP
+  echo "X-MultipleArgs=false" >> $APP
+  echo "Icon=${TARGET}/browser/chrome/icons/default/default128.png" >> $APP
+  echo "MimeType=${MIME_TYPES}" >> $APP
+  echo "Type=Application" >> $APP
+  echo "Categories=Application;Network;Development;WebBrowser" >> $APP
+  echo "Comment=Firefox Developer Edition Web Browser" >> $APP
+  echo "Actions=new-window;new-private-window;" >> $APP
+  echo "" >> $APP
+  echo "[Desktop Action new-window]" >> $APP
+  echo "Name=Open a New Window" >> $APP
+  echo "Exec=firefox-dev -new-window" >> $APP
+  echo "" >> $APP
+  echo "[Desktop Action new-private-window]" >> $APP
+  echo "Name=Open a New Private Window" >> $APP
+  echo "Exec=firefox-dev -private-window" >> $APP
 
-	echo "Firefox Dev Edition $1 installed."
+  echo "Firefox Dev Edition $1 installed."
 fi
