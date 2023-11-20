@@ -62,7 +62,7 @@ else
 	echo "GenericName=Firefox Developer Edition" >> $APP
 	echo "Exec=firefox-dev %u" >> $APP
 	echo "StartupNotify=true" >> $APP
-	echo "StartupWMClass=Firefox Developer Edition" >> $APP
+	echo "StartupWMClass=firefox-aurora" >> $APP
   echo "NoDisplay=false" >> $APP
 	echo "Terminal=false" >> $APP
 	echo "X-MultipleArgs=false" >> $APP
