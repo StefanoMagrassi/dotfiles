@@ -26,7 +26,7 @@ npm:
   # Install npm itselt as global package
   npm i -g npm
   # Install utility packages
-  npm i -g http-server vercel npm-check
+  npm i -g npm-check
 
 vim:
   rm -f ~/.vimrc
