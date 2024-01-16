@@ -3,7 +3,7 @@
 all: bash git npm vim terminator firefox
 
 bash:
-	rm -f ~/.bash_aliasesi
+	rm -f ~/.bash_aliases
 	ln -s $(PWD)/.bash_aliases ~/.bash_aliases
 	rm -f ~/.bash_colors
 	ln -s $(PWD)/.bash_colors ~/.bash_colors
