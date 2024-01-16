@@ -14,6 +14,7 @@ echo "------------------------------------------"
 echo ""
 
 DISTRO="$(lsb_release -s -c)"
+VERSION=$(. /etc/os-release && echo "$VERSION_CODENAME")
 NODE_VERSION=20.x
 
 # --- Install common packages
@@ -58,12 +59,12 @@ apt-get update && apt-get install -y \
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 chmod a+r /etc/apt/keyrings/docker.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $VERSION stable" > /etc/apt/sources.list.d/docker.list
 apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # --- Install Nodejs
-curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION} | sudo -E bash - &&\
-apt-get update && apt-get install -y nodejsi
+curl -fsSL https://deb.nodesource.com/setup_${NODE_VERSION} | sudo -E bash -
+apt-get update && apt-get install -y nodejs
 
 # --- Install Google Chrome
 curl -fSsL https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /usr/share/keyrings/google-chrome.gpg > /dev/null
