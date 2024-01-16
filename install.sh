@@ -36,11 +36,9 @@ apt-get update && apt-get install -y \
   meld \
   net-tools \
   numix-icon-theme-circle \
-  #openjdk-11-jdk \
   openssh-client \
   openssh-server \
   openssl \
-  python \
   python3 \
   python3-dev \
   rsync \
@@ -60,8 +58,7 @@ apt-get update && apt-get install -y \
 install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 chmod a+r /etc/apt/keyrings/docker.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $DISTRO stable"
-> /etc/apt/source.list.d/docker.list
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
 apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # --- Install Nodejs
@@ -82,7 +79,7 @@ apt-get update && apt-get install -y code
 
 # --- Git completion
 curl -O https://raw.githubusercontent.com/git/git/v2.25.1/contrib/completion/git-completion.bash
-mv git-coimpletion.bash /etc/bash_completion.d/
+mv git-completion.bash /etc/bash_completion.d/
 
 # --- Install Postman via snap
 snap install postman
