@@ -45,8 +45,8 @@ xfce:
 	mkdir -p ~/.config/xfce4/terminal
 	rm -f ~/.config/xfce4/terminal/terminalrc
 	cp $(PWD)/xfce4.terminal.terminalrc ~/.config/xfce4/terminal/terminalrc
-	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfc4-panel.xml
-	cp $(PWD)/xfce4.xfconf.xfc4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfc4-panel.xml
+	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+	cp $(PWD)/xfce4.xfconf.xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
 	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
 	cp $(PWD)/xfce4.xfconf.thunar.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
 	rm -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
