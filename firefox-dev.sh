@@ -3,7 +3,8 @@
 TARGET=~/.local/share/firefox-dev
 UNZIPPED=firefox
 BIN=~/.local/bin/firefox-dev
-APP=~/.local/share/applications/firefox-dev.desktop
+SHARE=~/.local/share/applications
+APP="$SHARE/firefox-dev.desktop"
 MIME_TYPES="text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;"
 
 # ---
@@ -56,7 +57,9 @@ else
   # Create bin symlink
   ln -s ${TARGET}/firefox $BIN
 
-  # Create .desktop application
+  # Create .desktop applicationi
+  mkdir -p $SHARE
+
   echo "[Desktop Entry]" >> $APP
   echo "Name=Firefox Developer Edition" >> $APP
   echo "GenericName=Firefox Developer Edition" >> $APP
