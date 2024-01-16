@@ -8,7 +8,7 @@
 echo ""
 echo "################ WARNING! ################"
 echo "                                          "
-echo "  This script as to be executed as root   "
+echo "  This script has to be executed as root  "
 echo "                                          "
 echo "------------------------------------------"
 echo ""
