@@ -1,12 +1,8 @@
 #! /bin/bash
 
-source ./_utils.sh
+rm -f ~/.npmrc
 
-SOURCE=$(pwd)/config/npm
-TARGET=~
-FILES=(.npmrc)
-
-ensure_and_make_link $SOURCE $TARGET ${FILES[@]}
+cp $(pwd)/config/npm/.npmrc ~/
 
 # Install npm itselt as global package
 npm i -g npm
