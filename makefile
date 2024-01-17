@@ -1,6 +1,6 @@
-.PHONY: all bash git npm vim terminator firefox
+.PHONY: all bash git npm vim terminator firefox pics
 
-all: bash git npm vim terminator firefox
+all: bash git npm vim terminator firefox pics
 
 bash:
 	$(PWD)/bash.sh
@@ -19,6 +19,9 @@ terminator:
 
 firefox:
 	$(PWD)/firefox-dev.sh
+
+pics:
+	$(PWD)/pics.sh
 
 xfce:
 	$(PWD)/xfce4.sh
