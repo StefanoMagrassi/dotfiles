@@ -1,9 +1,9 @@
 #! /bin/bash
 
-TARGET=~/.local/share/firefox-dev
+TARGET=$HOME/.local/share/firefox-dev
 UNZIPPED=firefox
-BIN=~/.local/bin/firefox-dev
-SHARE=~/.local/share/applications
+BIN=$HOME/.local/bin/firefox-dev
+SHARE=$HOME/.local/share/applications
 APP="$SHARE/firefox-dev.desktop"
 MIME_TYPES="text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;"
 
@@ -63,7 +63,7 @@ else
   echo "[Desktop Entry]" >> $APP
   echo "Name=Firefox Developer Edition" >> $APP
   echo "GenericName=Firefox Developer Edition" >> $APP
-  echo "Exec=firefox-dev %u" >> $APP
+  echo "Exec=${BIN} %u" >> $APP
   echo "StartupNotify=true" >> $APP
   echo "StartupWMClass=firefox-aurora" >> $APP
   echo "NoDisplay=false" >> $APP
@@ -78,11 +78,11 @@ else
   echo "" >> $APP
   echo "[Desktop Action new-window]" >> $APP
   echo "Name=Open a New Window" >> $APP
-  echo "Exec=firefox-dev -new-window" >> $APP
+  echo "Exec=${BIN} -new-window" >> $APP
   echo "" >> $APP
   echo "[Desktop Action new-private-window]" >> $APP
   echo "Name=Open a New Private Window" >> $APP
-  echo "Exec=firefox-dev -private-window" >> $APP
+  echo "Exec=${BIN} -private-window" >> $APP
 
   echo "Firefox Dev Edition $1 installed."
 fi
