@@ -22,7 +22,3 @@ firefox:
 
 pics:
 	$(PWD)/pics.sh
-
-xfce:
-	$(PWD)/xfce4.sh
-
