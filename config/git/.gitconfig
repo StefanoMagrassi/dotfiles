@@ -29,3 +29,5 @@
   keepBackup = false
 [init]
 	defaultbranch = main
+[pull]
+	rebase = false

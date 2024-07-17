@@ -6,6 +6,7 @@
   move_tab_left = <Alt>Tab
   edit_tab_title = <Primary><Shift>s
   edit_terminal_title = <Primary><Alt>x
+  help = <Alt>F1
 [profiles]
   [[default]]
     icon_bell = False
