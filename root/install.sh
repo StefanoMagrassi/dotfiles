@@ -51,8 +51,8 @@ apt-get update && apt-get install -y \
 # numix-icon-theme-circle \
 
 # --- Install softwares via snap
-snap install code docker gimp libreoffice postman slack
-
+snap install docker gimp libreoffice postman slack
+snap install --classic code
 snap install --classic node
 
 # --- Install Google Chrome

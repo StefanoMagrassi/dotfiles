@@ -1,5 +1,5 @@
 [global_config]
-  title_hide_sizetext = True
+  handle_size = 3
   always_split_with_profile = True
 [keybindings]
   toggle_scrollbar = <Primary><Alt>a
@@ -14,12 +14,12 @@
     background_darkness = 0.95
     background_type = transparent
     cursor_shape = ibeam
-    cursor_color = "#aaaaaa"
     foreground_color = "#d3dae3"
     scrollback_lines = 1000
     scrollback_infinite = True
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
     custom_command = /bin/bash
+    bold_is_bright = True
 [layouts]
   [[default]]
     [[[child1]]]
