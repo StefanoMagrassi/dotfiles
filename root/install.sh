@@ -30,6 +30,7 @@ apt-get update && apt-get install -y \
   manpages \
   meld \
   net-tools \
+  numix-icon-theme-circle \
   openssh-client \
   openssh-server \
   openssl \
@@ -48,7 +49,6 @@ apt-get update && apt-get install -y \
   zip \
   unzip
 # arc-theme \
-# numix-icon-theme-circle \
 
 # --- Install softwares via snap
 snap install docker gimp libreoffice postman slack
