@@ -23,6 +23,7 @@ apt-get update && apt-get install -y \
   git \
   git-man \
   gitk \
+  gnome-shell-extension-manager \
   gnupg \
   htop \
   make \
