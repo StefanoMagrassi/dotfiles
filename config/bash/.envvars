@@ -5,3 +5,9 @@ export PATH=$HOME_LOCAL/bin:$PATH
 export NODE_PATH=$HOME_LOCAL/lib/node_modules:$NODE_PATH
 
 export POSTMAN_DISABLE_GPU=true
+
+export VOLTA_HOME=$HOME/.volta
+export PATH=$VOLTA_HOME/bin:$PATH
+
+export ANDROID_SDK_ROOT=$HOME/Android/sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
