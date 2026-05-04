@@ -26,10 +26,12 @@ apt-get update && apt-get install -y \
   gnome-shell-extension-manager \
   gnupg \
   htop \
+  libnss3-tools \
   make \
   man-db \
   manpages \
   meld \
+  mkcert \
   net-tools \
   numix-icon-theme-circle \
   openssh-client \
